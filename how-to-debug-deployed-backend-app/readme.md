@@ -1,7 +1,7 @@
 # How to DEBUG a BTP CAP backend app in BAS?  
-	https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-diagnose-cap-applications-node-js-stack-at/ba-p/13515376
+https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-diagnose-cap-applications-node-js-stack-at/ba-p/13515376
 
-Important  
+## Important
 ## Step 5: 
 - Open a new separated terminal  
 - cf login
