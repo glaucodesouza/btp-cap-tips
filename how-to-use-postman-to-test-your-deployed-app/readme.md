@@ -11,7 +11,7 @@
 - Logon into your postman account
 - create a new collection in postman
 ## Step 3:
-- ##Create a new request 1 to get token for your app
+- ## Create a new request 1 to get token for your app
 - give a good name like my-app-get-token, or my-app-auth.
 - url
   - https://cfdevxxx.authentication.us10.hana.ondemand.com/oauth/token
