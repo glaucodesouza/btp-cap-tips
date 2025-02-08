@@ -53,13 +53,15 @@
     - add the part of service name to the url. e.g.: */odata/v4/employee/process*
     - e.g. complete url: **https://yourcustomer--cfdevxxx-dev-yourappname-srv.cfapps.us10.hana.ondemand.com/odata/v4/employee/process**
 - Params tab
+  - leave it empty
+- Authorization tab
+  - Auth Type: Bearer Token
+  - Token: **Paste here the token you got fron the first request for getting token**
+- Headers
+  - Add this key
+    - Content-Type
+    - Value: application/json
+- Click SEND
+  - yes. Now the SEND button will call your **BTP CAP Backend App**.
+  - ![image](https://github.com/user-attachments/assets/2aa9dd31-0f19-43ac-aa36-835ef2ccf37e)
 
-## Step 5: 
-- 
-
-## Step 6:
-- 
-
-
-
-  
