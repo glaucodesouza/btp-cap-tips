@@ -23,6 +23,7 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
 - cf login
 - cf ssh -N -L 9229:127.0.0.1:9229 myapp-srv
 	- It will open a new browser window, but you didn't need to use it.
+ 	- Because you only needed this command to run this different local port with ssh.
 
 ## Step 6:
 - After the end of step 6:
