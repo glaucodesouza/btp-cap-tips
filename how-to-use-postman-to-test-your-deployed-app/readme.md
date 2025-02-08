@@ -12,6 +12,8 @@
 - create a new collection in postman
   - Create a new request 1 (the "to get token" one) in postman
   - give a good name like my-app-get-token, or my-app-auth.
+  - url
+    - https://cfdevxxx.authentication.us10.hana.ondemand.com/oauth/token
   - Params tab
     - let is empty
   - Go to authorizations tab
@@ -34,6 +36,8 @@
         - enter your app-srv
         - enter the service bindings in up left side
         - select app-auth and click show sensitive data
+        - ![image](https://github.com/user-attachments/assets/167ea2ae-e96c-498a-8fc8-c5c99a193352)
+
 
     - 
 ## Step 3:
