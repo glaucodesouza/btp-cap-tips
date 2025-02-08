@@ -35,3 +35,5 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
   	- /odata/v4 (you get this from your app when testing locally you can see it)
   	- /employee (this is the service name in service.cds)
   	- /process (this is the function you have created in your srv/service.js)
+  	- ![image](https://github.com/user-attachments/assets/4b6ed9a6-8b69-4252-9de4-90f62217800c)
+
