@@ -7,16 +7,16 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
 ## Step 2: 
 - cf login
 ## Step 3:
-- To check if an application is accessible via SSH, you can use the following command:  
-	- cf ssh-enabled myapp-srv
-- If the app isn't accessible via SSH, it can be enabled with the command `cf enable-ssh`.  
+	- cf ssh-enabled myapp-srv  
 	- cf enable-ssh myapp-srv  
-  	- cf restart myapp-srv
-  	- cf ssh myapp-srv
-  OBS.: comand will look like this  
+  	- cf restart myapp-srv  
+  	- cf ssh myapp-srv  
+   OBS.: comand will look like this   
 	vcap@afa9bea3-b619-6476-5e97-1328:~$
   
 ## Step 4: 
+- ps aux (This will list  all process. Get the vcap PID one which has your app deployed asdress).  
+- kill -usr1 151 (for example if your app has PIT=151, and "-usr1" probably is a main linux user of the environment).  
 
 
 ## Step 5: 
