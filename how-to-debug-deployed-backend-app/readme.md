@@ -21,7 +21,7 @@ Pre-requisites:
 	vcap@afa9bea3-b619-6476-5e97-1328:~$
   
 ## Step 4: 
-- ps aux (This will list  all process. Get the vcap PID one which has your app deployed asdress).  
+- ps aux (This will list  all process. Get the vcap PID one which has your app deployed address).  
 - kill -usr1 151 (for example if your app has PID=151, and "-usr1" probably is a main linux user of the environment).  
 
 ## Step 5: 
