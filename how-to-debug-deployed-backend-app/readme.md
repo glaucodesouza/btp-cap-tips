@@ -28,4 +28,10 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
 ## Step 6:
 - After the end of step 6:
 - You put a breakpoint in some executable line in BAS  
-- You will call your app from POSTMAN (site or app)  
+- You will call your app from POSTMAN (site or app)
+- How to get your app url:
+	- https://customer-xpto--cfdevvir-dev-yourappname-srv.cfapps.us10.hana.ondemand.com/odata/v4/employee/process
+ 	- where /odata/v4/employee/process:
+  	- /odata/v4 (you get this from your app when testing locally you can see it)
+  	- /employee (this is the service name in service.cds)
+  	- /process (this is the function you have created in your srv/service.js)
