@@ -39,17 +39,16 @@
       - select app-auth and click show sensitive data
       - ![image](https://github.com/user-attachments/assets/01886eb5-4f4f-4348-8606-e8f4d81a3f53)
   - **YOUR app-auth request for getting the token will be like this bellow**
-  - ![image](https://github.com/user-attachments/assets/79f33784-1d0c-4fc2-97fd-fa2dec476a61)
-
-
-
-
-    - 
-
-- 
+    - ![image](https://github.com/user-attachments/assets/79f33784-1d0c-4fc2-97fd-fa2dec476a61)
+  - You can now click SEND to get the TOKEN.
+    - **COPY it to use in the other request which we will create bellow.**
   
 ## Step 4: 
-- 
+- ## **Create the request to get token for your app**
+- give a good name like my-app-get-token, or my-app-auth.
+- url
+  - https://cfdevxxx.authentication.us10.hana.ondemand.com/oauth/token
+- Params tab
 
 ## Step 5: 
 - 
