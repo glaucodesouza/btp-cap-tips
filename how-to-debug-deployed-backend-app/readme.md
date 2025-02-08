@@ -2,6 +2,11 @@
 https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-diagnose-cap-applications-node-js-stack-at/ba-p/13515376
 
 ## Important
+Pre-requisites:  
+- You have created your backend app-srv
+- You have already deployet it
+- Your app here for example has a main function to be called externally.
+
 ## Step 1: 
 - cf -v (to see whats your cf version)
 ## Step 2: 
