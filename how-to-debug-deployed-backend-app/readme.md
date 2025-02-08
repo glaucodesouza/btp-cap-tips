@@ -11,7 +11,7 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
 	- cf enable-ssh myapp-srv  
   	- cf restart myapp-srv  
   	- cf ssh myapp-srv  
-   OBS.: comand will look like this   
+   OBS.: New terminal command will look like this:  
 	vcap@afa9bea3-b619-6476-5e97-1328:~$
   
 ## Step 4: 
