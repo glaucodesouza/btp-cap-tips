@@ -37,6 +37,9 @@
         - enter the service bindings in up left side
         - select app-auth and click show sensitive data
         - ![image](https://github.com/user-attachments/assets/01886eb5-4f4f-4348-8606-e8f4d81a3f53)
+    - **YOUR app-auth request for get token will be like this bellow**
+    - ![image](https://github.com/user-attachments/assets/79f33784-1d0c-4fc2-97fd-fa2dec476a61)
+
 
 
 
