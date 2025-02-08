@@ -16,11 +16,10 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
   
 ## Step 4: 
 - ps aux (This will list  all process. Get the vcap PID one which has your app deployed asdress).  
-- kill -usr1 151 (for example if your app has PIT=151, and "-usr1" probably is a main linux user of the environment).  
-
+- kill -usr1 151 (for example if your app has PID=151, and "-usr1" probably is a main linux user of the environment).  
 
 ## Step 5: 
-- Open a new separated terminal  
+- ## Open a new separated terminal  
 - cf login
 - cf ssh -N -L 9229:127.0.0.1:9229 myapp-srv
 	- It will open a new browser window, but you didn't need to use it.
