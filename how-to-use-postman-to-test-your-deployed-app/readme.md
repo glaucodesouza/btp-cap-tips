@@ -24,8 +24,8 @@
   - Go to Body tab
     - Insert 3 keys:
       - grant_type, value: client_credentials
-      - client_id, value: (*get it from the steps above).
-      - client_secret, value: (*get it from the steps above).
+      - client_id, value: (**get it from the steps bellow**).
+      - client_secret, value: (**get it from the steps bellow**).
     - **HOW TO GET THESE ABOVE VALUES:**
       - steps to get these bellow informations
         - (To get client secret, client id)
