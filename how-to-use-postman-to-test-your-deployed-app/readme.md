@@ -36,7 +36,8 @@
         - enter your app-srv
         - enter the service bindings in up left side
         - select app-auth and click show sensitive data
-        - ![image](https://github.com/user-attachments/assets/167ea2ae-e96c-498a-8fc8-c5c99a193352)
+        - ![image](https://github.com/user-attachments/assets/01886eb5-4f4f-4348-8606-e8f4d81a3f53)
+
 
 
     - 
