@@ -3,6 +3,7 @@
 ## Pre-requisites
 - You have already a deployed app
 - You have the url to call your app externally
+- **IMPORTANT: ASK FOR A BTP COCKPIT Administrator or BASIS to give APIKey for you to test in postman**
 ## Step 1: 
 - We will create two requests
   - a request 1 will be to get the access token from your app-srv
@@ -21,8 +22,8 @@
   - fill up Auth Type: Bearer Token
   - let Token field empty for now
 - Go to Headers tab
-  - Insert a new key named: APIKey
-  - Value: (**ASK FOR A BTP COCPIT Administrator to give this APIKey for you**).
+  - Insert a new key named: **APIKey**
+  - Value: (**ASK FOR A BTP COCKPIT Administrator or BASIS to give this APIKey for you**).
     - e.g. a77iyuujDF87W4I0MJbA6CzAS0RnaLEQ
 - Go to Body tab
   - Insert 3 keys:
@@ -44,10 +45,13 @@
     - **COPY it to use in the other request which we will create bellow.**
   
 ## Step 4: 
-- ## **Create the request to get token for your app**
-- give a good name like my-app-get-token, or my-app-auth.
-- url
-  - https://cfdevxxx.authentication.us10.hana.ondemand.com/oauth/token
+- ## **Create the request to reun your BTP deployed app**
+- Give a good name like my-app.
+- **URL**
+  - Get your deployed app-srv url in your App Overview page
+    - e.g.: *https://yourcustomer--cfdevxxx-dev-yourappname-srv.cfapps.us10.hana.ondemand.com*
+    - add the part of service name to the url. e.g.: */odata/v4/employee/process*
+    - e.g. complete url: **https://yourcustomer--cfdevxxx-dev-yourappname-srv.cfapps.us10.hana.ondemand.com/odata/v4/employee/process**
 - Params tab
 
 ## Step 5: 
