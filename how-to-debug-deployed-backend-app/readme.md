@@ -5,6 +5,7 @@ https://community.sap.com/t5/technology-blogs-by-sap/set-up-remote-debugging-to-
 Pre-requisites:  
 - You have created your backend app-srv
 - You have already deployet it
+- Your app is a backend type (only Node.js for BTP CAP)
 - Your app here for example has a main function in srv/service.js to be called externally.
 
 ## Step 1: 
