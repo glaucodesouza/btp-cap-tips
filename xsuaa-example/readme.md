@@ -11,7 +11,7 @@
 ## Tips
 - in mta.yaml, the automatic generated code will have an error.
 - THIS BELLOW LINE WILL GIVE ERROR OF DEPLOY:
-  - in config part, xsappname: yourapp-**${org}-${space}**
-- **SOLUTION:**
-  - change in config part, xsappname: yourapp-xsuaa
-  - because BTP deployment will not recognize symbols and variables for this **${org}-${space}**.
+- in resources, yourapp-xsuaa,config partÇ
+  - ERROR: xsappname: yourapp-**${org}-${space}**
+  - CORRECT: xsappname: yourapp-xsuaa
+    - because BTP deployment will not recognize symbols and variables for this **${org}-${space}**.
