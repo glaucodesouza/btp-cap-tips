@@ -10,7 +10,7 @@
 
 ## Tips
 - in mta.yaml, the automatic generated code will have an error.
-- for example, this line is totally wrong and will have deploy error.
+- THIS BELLOW LINE WILL GIVE ERROR OF DEPLOY:
   - xsappname: yourapp-**${org}-${space}**
 - **SOLUTION:**
   - change for xsappname: yourapp-xsuaa
