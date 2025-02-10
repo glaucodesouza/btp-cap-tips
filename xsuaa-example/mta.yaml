@@ -1,0 +1,68 @@
+_schema-version: 3.3.0
+ID: yourapp
+version: 1.0.0
+description: "My Background app ..."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+modules:
+  - name: yourapp-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      buildpack: nodejs_buildpack
+      readiness-health-check-type: http
+      readiness-health-check-http-endpoint: /health
+    build-parameters:
+      builder: npm
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: yourapp_HDI
+      - name: yourapp-xsuaa
+      - name: yourapp-destination
+      
+  - name: yourapp-db
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: yourapp_HDI
+        properties:
+          TARGET_CONTAINER: yourapp_HDI
+
+resources:
+  - name: yourapp-xsuaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-name: yourapp-xsuaa
+      service-plan: application
+      config:
+        xsappname: yourapp-xsuaa
+        tenant-mode: dedicated
+
+  - name: yourapp_HDI
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+      config:
+        schema: yourapp
+    properties:
+      hdi-container-name: ${service-name}
+
+  - name: yourapp-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
