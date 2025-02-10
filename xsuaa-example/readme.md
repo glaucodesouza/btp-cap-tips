@@ -9,9 +9,12 @@
 - This will create yourapp-xsuaa and requirements.
 
 ## Tips
-- in mta.yaml, the automatic generated code will have an error.
-- THIS BELLOW LINE WILL GIVE ERROR OF DEPLOY:
-- in resources, yourapp-xsuaa,config partÇ
-  - ERROR: xsappname: yourapp-**${org}-${space}**
-  - CORRECT: xsappname: yourapp-xsuaa
-    - because BTP deployment will not recognize symbols and variables for this **${org}-${space}**.
+  ## 1 - in mta.yaml, the automatic generated code will have an error.
+  - THIS BELLOW LINE WILL GIVE ERROR OF DEPLOY:
+  - in resources, yourapp-xsuaa,config partÇ
+    - ERROR: xsappname: yourapp-**${org}-${space}**
+    - CORRECT: xsappname: yourapp-xsuaa
+      - because BTP deployment will not recognize symbols and variables for this **${org}-${space}**.
+  ## 2 - in your xs-security.json
+  - "xsappname": "yourappname",
+  - do not need to incremente with -xsuaa part.
