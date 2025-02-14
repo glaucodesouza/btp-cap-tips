@@ -24,3 +24,6 @@ cf env adpwfm-srv > default-env.json
 when debugging
 	url + ?sap-ui-xx-componentPreload=off
 	this shows variables with legible names.
+
+package.json/scripts
+	npm run build
