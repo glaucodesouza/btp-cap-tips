@@ -88,7 +88,7 @@
                   method: 'GET',
                   url: `/Endpoint`
                 });
-                  let responseEntry = empJobResponse2.data.feed.entry || [];
+                  let responseEntry = response.data.feed.entry || [];
                   debugger;
           } catch (error) {
               debugger;
