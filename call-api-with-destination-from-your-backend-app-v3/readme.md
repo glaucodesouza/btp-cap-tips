@@ -12,7 +12,27 @@
 - But BTP admin have created the destination with No Authorization for your BTP CAP App.
 - So, you do not need user and password.
 
-# 2-Service.cds
+
+
+# 2-package.json
+
+    "cds": {
+        "requires": {
+          "MY_DECLARED_DESTINATION_IN_PACKAGE.JSON": {
+            "kind": "rest",
+            "[production]": {
+              "credentials": {
+                "destination": "CORRECT_NAME_OF_DESTINATION_IN_BTP_COCKPIT",
+                "authentication": "NoAuthentication"
+              }
+            },
+            "csrf": true,
+            "csrfInBatch": true
+          }
+        }
+      }
+
+# 3-Service.cds
 - declare your myCustomFunction()
   
         using myschema from '../db/schema';
@@ -23,18 +43,15 @@
             function process() returns String; 
         }
 
-# 3-Service.js
+# 4-Service.js
 
     const { executeHttpRequest } = require('@sap-cloud-sdk/http-client');
 
     module.exports = cds.service.impl(async function () {
 
     this.on('myCustomFunction', async (req) => {
-    
-      const destination = await cds.connect.to('ADP_WFN');
-      console.log(`instanciando destination ADP_WFN`);
 
-       const destination2 = { destinationName: 'ADP_WFN' };
+       const destination2 = { destinationName: 'MY_DECLARED_DESTINATION_IN_PACKAGE.JSON' };
         try {
             const response = await executeHttpRequest(destination2, {
                   method: 'GET',
