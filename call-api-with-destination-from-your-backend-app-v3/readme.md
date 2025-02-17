@@ -7,12 +7,43 @@
 - But who configurated this destination, will let us call this destination with NoAuthorization.
 - So in package.json, we put NoAuthorization.
 
-# 1-Make sure destination is already created
+# 0-Make sure destination is already created
 - There is an API eith basic authorization
 - But BTP admin have created the destination with No Authorization for your BTP CAP App.
 - So, you do not need user and password.
 
 
+
+# 1-env/.env1
+- here we put config for local testing
+  
+              destinations='[
+                {
+                    "name":"MY_DECLARED_DESTINATION_IN_PACKAGEJSON",
+                    "url":"https://MY_DECLARED_DESTINATION_IN_PACKAGEJSON.dest",
+                    "proxyHost":"http://127.0.0.1",
+                    "proxyPort":"8887"
+                }
+            ]'
+            cds_requires='{
+                "auth":{
+                    "strategy":"dummy",
+                    "kind":"dummy"
+                },
+                "messaging":{
+                    "kind":"local-messaging"
+                },
+                "MY_DECLARED_DESTINATION_IN_PACKAGEJSON": {
+                    "impl":"@sap/cds/libx/_runtime/remote/Service.js",
+                    "external":true,
+                    "kind":"rest",
+                    "csrf":true,
+                    "csrfInBatch":true,
+                    "credentials":{
+                        "destination":"CORRECT_NAME_OF_DESTINATION_IN_BTP_COCKPIT"
+                    }
+                }
+            }'
 
 # 2-package.json
 
