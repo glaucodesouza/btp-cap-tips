@@ -23,7 +23,7 @@
       }
     },
     {
-      "name": "DEBUG Deployed App, Attach CF Port 9229",
+      "name": "DEBUG Deployed App in local BAS, Attach CF Port 9229",
       "port": 9229,
       "request": "attach",
       "type": "node",
